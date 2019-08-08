@@ -5,36 +5,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Formularz zamówienia pizzy</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <h1>Formularz zamówienia</h1>
-    <form action="" id="form">
+    <form name="formularz" id="form" method="post">
+
+        <!-- Dane kontaktowe/adresowe - do dostawy -->
+
         <label for="Imie" class="labelGroup">
-            <div class="opisGroup">Imię:</div>
+            <div class="descriptionGroup">Imię:</div>
             <input type="text" name="Imię" class="inputText" id="imie">
         </label>
         <label for="Nazwisko" class="labelGroup">
-            <div class="opisGroup">Nazwisko:</div>
+            <div class="descriptionGroup">Nazwisko:</div>
             <input type="text" name="Nazwisko" class="inputText" id="nazwisko">
         </label>
-        <label for="UlicaiNumerdomu" class="labelGroup">
-            <div class="opisGroup">Ulica:</div>
-            <input type="text" name="" class="inputText" id="ulica">
-            <div class="opisGroup">Numer Domu:</div>
-            <input type="text" name="" class="inputText" id="numerdomu">
+        <label for="Ulica" class="labelGroup">
+            <div class="descriptionGroup">Ulica:</div>
+            <input type="text" name="Ulica" class="inputText" id="ulica">
         </label>
-        <label for="KodpocztowyiMiasto" class="labelGroup">
-            <div class="opisGroup">Kod pocztowy:</div>
-            <input type="text" name="" class="inputText" id="kodpocztowy">
-            <div class="opisGroup">Miasto:</div>
-            <input type="text" name="" class="inputText" id="miasto">
+        <label for="Numerdomu" class="labelGroup">
+            <div class="descriptionGroup">Numer Domu:</div>
+            <input type="text" name="Numerdomu" class="inputText" id="numerdomu">
         </label>
-        <div class="opisGroup">Wybór pizzy:</div>
-        <label for="Pizza" class="labelGroup">
+        <label for="Kodpocztowy" class="labelGroup">
+            <div class="descriptionGroup">Kod pocztowy:</div>
+            <input type="text" name="Kodpocztowy" class="inputText" id="kodpocztowy">
+        </label>
+        <label for="Miasto" class="labelGroup">
+            <div class="descriptionGroup">Miasto:</div>
+            <input type="text" name="Miasto" class="inputText" id="miasto">
+        </label>
 
+        <!-- Lista rozwijana z wyborem pizzy -->
+
+        <div class="descriptionGroup">Wybór pizzy:</div>
+        <label for="Pizza" class="labelGroup">
             <select name="WyborPizzy" id="wyborPizzy" class="lista">
                 <option value="0" class="options" disabled selected>---Wybierz pizzę---</option>
                 <option value="1" class="options">Margarita</option>
@@ -42,8 +51,10 @@
                 <option value="3" class="options">Hawajska</option>
                 <option value="4" class="options">Grzybowa</option>
             </select>
-<span id="price">0 PLN</span>
+            <span id="price">0 PLN</span>
         </label>
+
+        <!-- Checkboxy z sosami i zgodą RODO -->
 
         <label for="SosyiZgoda" class="labelGroup">
             <label for="">Czosnkowy </label>
@@ -51,18 +62,25 @@
             <label for="">Pomidorowy</label>
             <input type="checkbox" class="inputText" name="Sos2" id="Sos2" class="checkGroup" value="Pomidorowy"> <br>
             <label for="">Wyrażam zgodę na przetważanie danych osobowych</label>
-            <input type="checkbox" class="inputText" name="Rodo" id="RODO" class="checkGroup"
-                value="RODO" required>
+            <input type="checkbox" class="inputText" name="Rodo" id="RODO" class="checkGroup" value="RODO" required>
         </label>
+
+
+        <!-- Przycisk wysyłający -->
+
         <label for="Wyslij">
-            <button type="submit" class="buttonGroup" value="Wyślij" id="button1">Wyślij</button>
+            <button type="submit" class="buttonGroup" value="Wyślij" id="button1" onclick="eventHandler();">Wyślij</button>
         </label>
     </form>
-    <ul id="errors"></ul> <!--  dodane na errory -->
 
+    <!--  Dodane w celu obsługi errorów -->
+    <ul id="errors"></ul>
+
+
+    <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
-    <!-- <script src="js/jquery-3.1.1.min.js"></script> -->
-    <script src="js/2-warsztat-rozwiazanie.js"></script>
+    <!-- Custom script -->
+    <script src="js/main.js"></script>
 </body>
 
 </html>
