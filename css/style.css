@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+}
+
+body {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; */
+    background-color: wheat;
+}
+
+#form {
+    width: 75%;
+    margin: 0 auto;
+padding: 20px; 
+    background-color: antiquewhite;
+}
+
+.labelGroup {
+    display: block;
+   margin-bottom: 20px; 
+  
+    background-color: antiquewhite;
+}
+
+.opisGroup {
+font-size: 20px;
+
+}
+
+.inputText {
+  width: 100%;
+}
+
+.options {
+    width: 30px;
+    height: 20px;
+}
